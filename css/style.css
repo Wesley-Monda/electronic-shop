@@ -1,0 +1,125 @@
+/* ==========================================================================
+   1. BRAND THEME VARIABLES & GLOBAL STYLES
+   ========================================================================== */
+:root {
+  --tech-primary: #1f9d55;       /* Primary brand green */
+  --tech-primary-hover: #178044; /* Darker green for hover states */
+  --tech-dark: #0f172a;          /* Slate navy for dark headers/footers */
+  --tech-light: #f8fafc;         /* Soft light background */
+  --tech-text-muted: #64748b;    /* Secondary text color */
+}
+
+/* Global Font & Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #334155;
+}
+
+/* ==========================================================================
+   2. CUSTOM UTILITY & COLOR CLASSES
+   ========================================================================== */
+.text-tech-primary {
+  color: var(--tech-primary) !important;
+}
+
+.bg-tech-dark {
+  background-color: var(--tech-dark) !important;
+}
+
+/* ==========================================================================
+   3. CUSTOM BUTTON STYLES
+   ========================================================================== */
+/* Primary Brand Button */
+.btn-tech {
+  background-color: var(--tech-primary);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-tech:hover, 
+.btn-tech:focus, 
+.btn-tech:active {
+  background-color: var(--tech-primary-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(31, 157, 85, 0.25);
+}
+
+/* Outline Success Customization */
+.btn-outline-success {
+  color: var(--tech-primary) !important;
+  border-color: var(--tech-primary) !important;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--tech-primary) !important;
+  color: #ffffff !important;
+}
+
+/* Category Filter Active State */
+.filter-btn.active {
+  background-color: var(--tech-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--tech-primary) !important;
+}
+
+/* ==========================================================================
+   4. PRODUCT CARDS & HOVER ANIMATIONS
+   ========================================================================== */
+.product-card {
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Subtle lift animation on hover */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Card image padding and object fit */
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   5. PRODUCT DETAIL PAGE STYLES
+   ========================================================================== */
+/* Gallery Main Image Container */
+#mainImage {
+  max-height: 380px;
+  object-fit: contain;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Image Thumbnails */
+.thumb-img {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.thumb-img:hover {
+  transform: scale(1.05);
+  border-color: var(--tech-primary) !important;
+}
+
+.border-tech-primary {
+  border-color: var(--tech-primary) !important;
+}
+
+/* ==========================================================================
+   6. FORM FOCUS OVERRIDES (Contact & Search)
+   ========================================================================== */
+.form-control:focus, 
+.form-select:focus {
+  border-color: var(--tech-primary);
+  box-shadow: 0 0 0 0.25rem rgba(31, 157, 85, 0.2);
+}
